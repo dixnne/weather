@@ -1,0 +1,62 @@
+@if (data) {
+    <section class="py-5 bg-skyblue">
+        <div class="container col-md-10">
+            <div class="d-flex justify-content-center">
+                <span class="borel-regular purple fs-3">Coordinates: {{data.coord.lat}}, {{data.coord.lon}}</span>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bg-blue p-4 rounded-5 shadow h-100">
+                        <div class="row h-100">
+                            <div class="col-6 h-100 border-end border-dark border-3 d-flex flex-column justify-content-center align-items-end">
+                                <span class="fs-3 poppins-regular">Min</span>
+                                <span class="fs-4 borel-regular">{{data.main.temp_min}}°K</span>
+                                <span class="fs-4 borel-regular">{{toCelsius(data.main.temp_min)}}°C</span>
+                            </div>
+                            <div class="col-6 h-100 d-flex flex-column justify-content-center align-items-start">
+                                <span class="fs-3 poppins-regular">Max</span>
+                                <span class="fs-4 borel-regular">{{data.main.temp_max}}°K</span>
+                                <span class="fs-4 borel-regular">{{toCelsius(data.main.temp_max)}}°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="d-flex bg-blue p-4 rounded-5 shadow">
+                        <span class="material-symbols-outlined bg-purple rounded-circle p-4 shadow mint weather">
+                            {{weatherIcon}}
+                        </span>
+                        <div class="w-100 ps-5 d-flex flex-column justify-content-center">
+                            <span class="borel-regular fs-1 border-bottom border-dark border-2">{{data.name}}, {{data.sys.country}}</span>
+                            <span class="poppins-regular fs-3">{{data.weather[0].description | titlecase}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex py-4 justify-content-center">
+                <div class="shadow circle rounded-circle bg-skyblue d-flex flex-column justify-content-center align-items-center">
+                    <span class="material-symbols-outlined purple">
+                        cloud
+                    </span>
+                    <span class="borel-regular fs-4 border-bottom border-dark">Clouds</span>
+                    <span class="fs-4 poppins-regular">{{data.clouds.all}}%</span>
+                </div>
+                <div class="shadow circle rounded-circle bg-blue mx-5 d-flex flex-column justify-content-center align-items-center">
+                    <span class="material-symbols-outlined mint">
+                        thermostat
+                    </span>
+                    <span class="borel-regular fs-4 border-bottom border-dark">Temperature</span>
+                    <span class="fs-4 poppins-regular">{{data.main.temp}}°K</span>
+                    <span class="fs-4 poppins-regular">{{toCelsius(data.main.temp)}}°C</span>
+                </div>
+                <div class="shadow circle rounded-circle bg-purple d-flex flex-column justify-content-center align-items-center">
+                    <span class="material-symbols-outlined skyblue">
+                        water_drop
+                    </span>
+                    <span class="borel-regular fs-4 border-bottom border-dark">Humidity</span>
+                    <span class="fs-4 poppins-regular">{{data.main.humidity}}%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+}

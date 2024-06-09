@@ -1,0 +1,17 @@
+.material-symbols-outlined {
+    font-size: 4rem;
+}
+
+.material-symbols-outlined.weather {
+    font-size: 5rem;
+}
+
+section {
+    height: 90vh;
+}
+
+.circle {
+    height: 250px;
+    width: 250px;
+    border: 10px var(--purple) solid;
+}
