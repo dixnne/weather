@@ -1,1 +1,13 @@
-<p>gob works!</p>
+<section class="bg-yellow">
+    <div class="h-100 container d-flex justify-content-center align-items-center py-5">
+        <div class="w-100 h-100 rounded-5 p-4 bg-pink d-flex justify-content-center flex-column align-items-center">
+            <span class="border-light border-3 border-bottom yellow fs-5 w-100 text-center poppins-regular mb-5">Open Weather API</span>
+            <span class="orange poppins-regular fs-2 mb-3">Search your</span>
+            <span class="yellow borel-regular title">state!</span>
+            <input type="text" [(ngModel)]="state" class="form-control mb-3" placeholder="State...">
+            <button class="btn btn-light w-100 mb-3" [routerLink]="['/gob/weather', state]">Search</button>
+            <span class="yellow poppins-regular fs-5 mb-3 text-center">Or choose it in the map (only orange states are available)</span>
+        </div>
+        <app-g-map></app-g-map>
+    </div>
+</section>

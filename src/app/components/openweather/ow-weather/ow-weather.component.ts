@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { OpenweatherService } from '../../../shared/openweather.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TitleCasePipe } from '@angular/common';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-ow-weather',
   standalone: true,
@@ -15,13 +16,23 @@ export class OwWeatherComponent {
   data?: any;
   weatherIcon: string = "sunny";
 
-  constructor(private openweatherService: OpenweatherService, private activatedRoute: ActivatedRoute) {
+  constructor(private openweatherService: OpenweatherService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.params.subscribe((params) => {
       this.state = params["state"];
       this.openweatherService.getWeather(this.state).subscribe((res: any) => {
         console.log(res);
         this.data = res;
-        this.weatherIcon = this.getWeatherIcon(this.data.weather[0].id);
+        if (res.error) {
+          Swal.fire({
+            title: "Where?",
+            text: "Couldn't find state",
+            icon: "error"
+          }).then(() => {
+            this.router.navigate(['/openweather'])
+          });
+        } else {
+          this.weatherIcon = this.getWeatherIcon(this.data.weather[0].id);
+        }
       }); 
       console.log(this.data);
     });

@@ -1,0 +1,11 @@
+path {
+    fill: var(--orange);
+}
+
+path.selected {
+    fill: var(--coral);
+}
+
+path.selected:hover {
+    fill: var(--pink);
+}

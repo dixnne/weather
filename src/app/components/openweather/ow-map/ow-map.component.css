@@ -1,0 +1,7 @@
+path {
+    fill: var(--blue);
+}
+
+path:hover {
+    fill: var(--purple);
+}
