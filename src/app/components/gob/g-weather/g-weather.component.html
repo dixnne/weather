@@ -1,1 +1,35 @@
-<p>g-weather works!</p>
+<div id="space" class=" bg-yellow">
+    <div id="title">
+        <h1 class="bg-coral borel-regular">{{data[0].state}}</h1>
+    </div>
+    <div>
+        <div id="content" >
+            <table class="w-100 poppins-regular">
+                <thead>
+                    <tr class="bg-coral">
+                        <th>Name</th>
+                        <th>State</th>
+                        <th>Relativehumidity</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Tempc</th>
+                        <th>Windspeedkm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of data; track item) {
+                        <tr class="bg-pink">
+                            <td>{{item.name}}</td>
+                            <td>{{item.state}}</td>
+                            <td>{{item.relativehumidity}}</td>
+                            <td>{{item.longitude}}</td>
+                            <td>{{item.latitude}}</td>
+                            <td>{{item.tempc}}<span class="material-symbols-outlined orange">thermostat</span></td>
+                            <td>{{item.windspeedkm}}<span  class="material-symbols-outlined orange">air</span></td>
+                        </tr>
+                    }
+                </tbody>    
+            </table>
+        </div>
+    </div>
+</div>

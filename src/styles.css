@@ -1,90 +1,90 @@
-body {
-    height: 100%;
+#bootstrap-override {
+  height: 100%;
 
-    --pink: #E178C5;
-    --coral: #FF8E8F;
-    --orange: #FFB38E;
-    --yellow: #FFFDCB;
-    --purple: #7B66FF;
-    --blue: #5FBDFF;
-    --skyblue: #96EFFF;
-    --mint: #C5FFF8;
+  --pink: #e178c5;
+  --coral: #ff8e8f;
+  --orange: #ffb38e;
+  --yellow: #fffdcb;
+  --purple: #7b66ff;
+  --blue: #5fbdff;
+  --skyblue: #96efff;
+  --mint: #c5fff8;
 }
 
 .pink {
-    color: var(--pink);
+  color: var(--pink);
 }
 
-.coral {
-    color: var(--coral);
+#bootstrap-override .coral {
+  color: var(--coral);
 }
 
-.orange {
-    color: var(--orange);
+#bootstrap-override .orange {
+  color: var(--orange);
 }
 
-.yellow {
-    color: var(--yellow);
+#bootstrap-override .yellow {
+  color: var(--yellow);
 }
 
 .purple {
-    color: var(--purple);
+  color: var(--purple);
 }
 
 .blue {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .skyblue {
-    color: var(--skyblue);
+  color: var(--skyblue);
 }
 
 .mint {
-    color: var(--mint);
+  color: var(--mint);
 }
 
-.bg-pink {
-    background-color: var(--pink);
+#bootstrap-override .bg-pink {
+  background-color: var(--pink);
 }
 
-.bg-coral {
-    background-color: var(--coral);
+#bootstrap-override .bg-coral {
+  background-color: var(--coral);
 }
 
-.bg-orange {
-    background-color: var(--orange);
+#bootstrap-override .bg-orange {
+  background-color: var(--orange);
 }
 
-.bg-yellow {
-    background-color: var(--yellow);
+#bootstrap-override .bg-yellow {
+  background-color: var(--yellow);
 }
 
 .bg-purple {
-    background-color: var(--purple);
+  background-color: var(--purple);
 }
 
 .bg-blue {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .bg-skyblue {
-    background-color: var(--skyblue);
+  background-color: var(--skyblue);
 }
 
 .bg-mint {
-    background-color: var(--mint);
+  background-color: var(--mint);
 }
 
 .borel-regular {
-    font-family: "Borel", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 .poppins-extralight {
@@ -188,5 +188,3 @@ body {
   font-weight: 900;
   font-style: italic;
 }
-
-  

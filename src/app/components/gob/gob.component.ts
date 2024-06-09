@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './gob.component.html',
-  styleUrl: './gob.component.css'
+  styleUrl: './gob.component.css',
 })
-export class GobComponent {
-
-}
+export class GobComponent {}
