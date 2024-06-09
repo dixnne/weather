@@ -1,0 +1,45 @@
+#content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+#title {
+  padding-top: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+  & h1 {
+    height: 100px;
+    padding-top: 40px;
+    border-radius: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 3px var(--orange), -2px -2px 3px var(--pink);
+  }
+}
+#space {
+  height: 90vh;
+  background-color: var(--yellow);
+}
+table {
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  & tr {
+    height: 50px;
+    & th {
+      color: var(--yellow);
+      text-shadow: -2px -2px 3px var(--pink);
+    }
+    & td {
+      color: #ffffff;
+    }
+  }
+}
+tbody {
+  tr :hover {
+    background-color: var(--orange);
+  }
+}

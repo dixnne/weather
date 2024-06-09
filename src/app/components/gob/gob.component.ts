@@ -8,9 +8,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [FormsModule, GMapComponent, RouterModule],
   templateUrl: './gob.component.html',
-  styleUrl: './gob.component.css'
+  styleUrl: './gob.component.css',
 })
-export class GobComponent {
-
-  state: string = "";
-}
+export class GobComponent {}
